@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptado&DesencriptadorDeTexto</title>
+    <link rel="stylesheet" href="./Styles/Style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./assets/Logo.png" alt="Logo_Alura" />
+      </nav>
+    </header>
+
+    <main class="main-Container">
+      <section class="MensajeDeEntrada">
+        <textarea
+          name="Mensaje"
+          id="Texto"
+          placeholder="Ingrese el Texto aquí"
+        ></textarea>
+        <div class="Message_Warning">
+          <img
+            src="./assets/bi_exclamation-circle-fill.png"
+            alt="advertencia"
+          />
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        <section class="Botones">
+          <button class="Encriptador">Encriptar</button>
+          <button class="Desencriptador">Desencriptar</button>
+        </section>
+      </section>
+      <section class="SectionDeSalida">
+        <div class="placeholderDeSalida">
+          <p>Ningún mensaje fue encontrado</p>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div class="MensajeDeSalida" id="MensajeDeSalida"></div>
+      </section>
+    </main>
+    <script src="./Js/App.js"></script>
+  </body>
+</html>
