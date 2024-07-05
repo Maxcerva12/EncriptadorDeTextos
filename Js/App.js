@@ -22,10 +22,14 @@ document
     }
   });
 
+//   funcion para cumplir la condicion
+
 function TextoValido(texto) {
   const CaracteresValidos = /^[a-z\s\.\,\;\:]+$/;
   return CaracteresValidos.test(texto);
 }
+
+// funcion para encriptar
 
 function encriptar(texto) {
   const reglas = {
@@ -37,6 +41,8 @@ function encriptar(texto) {
   };
   return texto.replace(/[eioua]/g, (letra) => reglas[letra]);
 }
+
+// funcion para desencriptar
 
 function desencriptar(texto) {
   const reglas = {
@@ -53,6 +59,8 @@ function Limpiarcaja() {
   document.getElementById("Texto").value = "";
 }
 
+// funcion para mostrar el mensaje encriptado o desencriptado
+
 function mostrarMensaje(mensaje) {
   const mensajeDeSalida = document.getElementById("MensajeDeSalida");
   const placeholderDeSalida = document.querySelector(".placeholderDeSalida");
@@ -64,6 +72,8 @@ function mostrarMensaje(mensaje) {
   ajustarAlineacion(mensaje);
   Limpiarcaja();
 }
+
+// Funcion del boton para copiar el mensaje encriptado o desencriptado
 
 document.querySelector(".Copiar").addEventListener("click", function () {
   const mensajeDeSalida =
@@ -90,3 +100,23 @@ function ajustarAlineacion(mensaje) {
     document.querySelector(".SectionDeSalida").style.justifyContent = "center";
   }
 }
+
+// Configuraciones del scroll Automatico
+
+document.querySelector(".Botones").addEventListener("click", function () {
+  if (window.innerWidth < 1200) {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  }
+});
+
+document.querySelector(".Copiar").addEventListener("click", function () {
+  if (window.innerWidth < 1200) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+});
