@@ -121,7 +121,7 @@ textarea::placeholder {
   gap: 8px;
   border-radius: 24px;
   border: 1px solid #0a3871;
-  background: #d8dfe8;
+  background: transparent;
   flex-shrink: 0;
   color: #0a3871;
   text-align: center;
@@ -133,6 +133,30 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.Copiar {
+  display: flex;
+  justify-content: center;
+  width: 328px;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 24px;
+  border: 1px solid #0a3871;
+  background: transparent;
+  flex-shrink: 0;
+  color: #0a3871;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  position: absolute;
+  bottom: 34px;
+  display: none;
+}
+
 .SectionDeSalida {
   width: 400px;
   height: 66.875rem;
@@ -140,8 +164,10 @@ textarea::placeholder {
   position: relative;
   border-radius: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  /* overflow: auto; */
+  flex-direction: column;
 }
 
 .placeholderDeSalida {
@@ -163,4 +189,20 @@ textarea::placeholder {
   line-height: 150%;
   color: #495057;
   padding-top: 16px;
+}
+
+.MensajeDeSalida {
+  display: none;
+  max-width: 338px;
+  height: auto;
+  color: #495057;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  word-wrap: break-word;
+  max-height: 48.813rem;
+  overflow: auto;
+  padding-top: 20px;
 }
