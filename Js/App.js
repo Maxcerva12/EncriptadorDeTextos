@@ -1,19 +1,31 @@
-// Selecciona el elemento con la clase .Copiar
 const copiarElement = document.querySelector(".Copiar");
 
 document.querySelector(".Encriptador").addEventListener("click", function () {
   const texto = document.getElementById("Texto").value;
-  const textoEncriptado = encriptar(texto);
-  mostrarMensaje(textoEncriptado);
+  if (TextoValido(texto)) {
+    const textoEncriptado = encriptar(texto);
+    mostrarMensaje(textoEncriptado);
+  } else {
+    alert("Por favor, Solo se aceptan letras minúsculas y sin acentos. ");
+  }
 });
 
 document
   .querySelector(".Desencriptador")
   .addEventListener("click", function () {
     const texto = document.getElementById("Texto").value;
-    const textoDesencriptado = desencriptar(texto);
-    mostrarMensaje(textoDesencriptado);
+    if (TextoValido(texto)) {
+      const textoDesencriptado = desencriptar(texto);
+      mostrarMensaje(textoDesencriptado);
+    } else {
+      alert("Por favor, Solo se aceptan letras minúsculas y sin acentos. ");
+    }
   });
+
+function TextoValido(texto) {
+  const CaracteresValidos = /^[a-z\s\.\,\;\:]+$/;
+  return CaracteresValidos.test(texto);
+}
 
 function encriptar(texto) {
   const reglas = {
@@ -37,6 +49,10 @@ function desencriptar(texto) {
   return texto.replace(/enter|imes|ai|ober|ufat/g, (letra) => reglas[letra]);
 }
 
+function Limpiarcaja() {
+  document.getElementById("Texto").value = "";
+}
+
 function mostrarMensaje(mensaje) {
   const mensajeDeSalida = document.getElementById("MensajeDeSalida");
   const placeholderDeSalida = document.querySelector(".placeholderDeSalida");
@@ -46,6 +62,7 @@ function mostrarMensaje(mensaje) {
   copiarElement.style.display = "block";
   placeholderDeSalida.style.display = "none";
   ajustarAlineacion(mensaje);
+  Limpiarcaja();
 }
 
 document.querySelector(".Copiar").addEventListener("click", function () {

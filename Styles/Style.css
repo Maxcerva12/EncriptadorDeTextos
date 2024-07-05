@@ -38,6 +38,9 @@ header {
 .MensajeDeEntrada {
   width: 700px;
   height: 66.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 textarea {
@@ -51,7 +54,7 @@ textarea {
   font-size: 32px;
   font-weight: 400;
   color: #0a3871;
-  padding-top: 68px;
+  padding-top: 35px;
   padding-left: 40px;
 }
 
@@ -63,8 +66,8 @@ textarea::placeholder {
 }
 
 .container-bottom {
-  position: absolute;
-  bottom: 72px;
+  /* position: absolute;
+  bottom: 72px; */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -153,7 +156,7 @@ textarea::placeholder {
   line-height: normal;
   cursor: pointer;
   position: absolute;
-  bottom: 34px;
+  bottom: 40px;
   display: none;
 }
 
