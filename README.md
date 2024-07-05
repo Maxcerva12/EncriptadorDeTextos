@@ -17,7 +17,7 @@ Este proyecto es un encriptador y desencriptador de texto simple que utiliza un 
 
 1. Clona este repositorio en tu máquina local.
 2. Abre el archivo `index.html` en tu navegador.
-3. Ingresa un mensaje de texto y una clave secreta.
+3. Ingresa un mensaje de texto el cual quieres encriptar o desencriptar.
 4. Haz clic en "Encriptar" o "Desencriptar" según lo que desees hacer.
 
 ## Tecnologías utilizadas

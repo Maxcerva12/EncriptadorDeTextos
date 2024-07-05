@@ -89,7 +89,7 @@ textarea::placeholder {
 
 .Botones {
   display: flex;
-  width: 680px;
+  /* width: 680px; */
   align-items: flex-start;
   gap: 24px;
 }
@@ -208,4 +208,122 @@ textarea::placeholder {
   max-height: 48.813rem;
   overflow: auto;
   padding-top: 20px;
+}
+
+/* Footer style */
+
+.footerDelSitio {
+  background-color: #0a3871;
+  color: #ffffff;
+  padding: 2rem;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+}
+
+.contenidoDelFooter {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.InfoDelDesarrador,
+.infoContacto,
+.infoLicense {
+  margin-bottom: 1rem;
+}
+
+.footerDelSitio a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footerDelSitio a:hover {
+  opacity: 0.8;
+}
+
+.footerDelSitio p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 1200px) {
+  .main-Container {
+    flex-direction: column;
+  }
+
+  .MensajeDeEntrada {
+    width: clamp(229px, 75%, 624px);
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .Encriptador {
+    width: clamp(284px, 75%, 295px);
+  }
+
+  .Desencriptador {
+    width: clamp(284px, 75%, 295px);
+  }
+
+  .Copiar {
+    width: clamp(231px, 75%, 295px);
+    position: relative;
+    bottom: 0;
+  }
+
+  .SectionDeSalida {
+    width: clamp(229px, 75%, 624px);
+    height: auto;
+    padding: 32px;
+  }
+
+  .placeholderDeSalida {
+    width: 100%;
+  }
+
+  .placeholderDeSalida img {
+    display: none;
+  }
+
+  .MensajeDeSalida {
+    max-width: 100%;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .InfoDelDesarrador,
+  .infoContacto,
+  .infoLicense {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .SectionDeSalida {
+    margin-top: 64px;
+  }
+  .contenidoDelFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container-bottom {
+    align-items: center;
+  }
+
+  .Botones {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /* align-items: flex-start; */
+    gap: 24px;
+  }
 }
