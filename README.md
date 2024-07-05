@@ -1,13 +1,17 @@
 # EncriptadorDeTextos
 
-# Encriptador y Desencriptador de Texto
+## Encriptador y Desencriptador de Texto Simple
 
-Este proyecto es un encriptador y desencriptador de texto que utiliza el algoritmo AES (Advanced Encryption Standard) para cifrar y descifrar mensajes.
+Este proyecto es un encriptador y desencriptador de texto simple que utiliza un conjunto de reglas de sustitución para transformar el texto. A diferencia de los algoritmos de cifrado tradicionales como AES, este encriptador se basa en la sustitución de vocales por combinaciones de letras específicas para "ocultar" el mensaje original.
 
-## Características
+### Características
 
-- **Encriptación**: Convierte un mensaje de texto en una cadena cifrada utilizando una clave secreta.
-- **Desencriptación**: Descifra una cadena cifrada utilizando la misma clave secreta.
+- **Encriptación Simple**: Sustituye las vocales en un mensaje de texto por combinaciones predefinidas para crear una versión "encriptada" del mensaje.
+- **Desencriptación Simple**: Revierte el proceso de encriptación sustituyendo las combinaciones de letras por las vocales originales para obtener el mensaje original.
+- **Validación de Texto**: Asegura que solo se acepten letras minúsculas y sin acentos antes de proceder con la encriptación o desencriptación.
+- **Interfaz de Usuario Amigable**: Proporciona una interfaz web interactiva para encriptar y desencriptar mensajes, con alertas y mensajes de confirmación para una mejor experiencia de usuario.
+- **Funcionalidad de Copiado**: Permite copiar el texto encriptado o desencriptado al portapapeles con solo un clic.
+- **Ajuste de Alineación Automático**: Ajusta la alineación del texto de salida basándose en la longitud del mensaje para una visualización óptima.
 
 ## Uso
 
